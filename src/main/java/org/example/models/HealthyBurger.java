@@ -21,20 +21,18 @@ public class HealthyBurger extends Hamburger{
     }
 
     @Override
-    public double getPrice() {
-        double totalPrice = super.getPrice();
+    public double itemizeHamburger() {
+        double total = super.itemizeHamburger();
         if (healthyExtra1Name != null) {
-            totalPrice += healthyExtra1Price;
+            System.out.println("HealthyAddition1: " + healthyExtra1Name);
+            total += healthyExtra1Price;
         }
         if (healthyExtra2Name != null) {
-            totalPrice += healthyExtra2Price;
+            System.out.println("HealthyAddition2: " + healthyExtra2Name);
+            total += healthyExtra2Price;
         }
-        return totalPrice;
-    }
-
-    @Override
-    public double itemizeHamburger() {
-        return 0;
+        System.out.println("Price: " + total);
+        return total;
     }
 }
 

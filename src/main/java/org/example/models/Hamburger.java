@@ -86,19 +86,30 @@ public class Hamburger {
         System.out.println(addition4Name + " eklendi.");
     }
     public double getPrice() {
-        double totalPrice = this.price;
-
-        if (addition1Name != null) totalPrice += addition1Price;
-        if (addition2Name != null) totalPrice += addition2Price;
-        if (addition3Name != null) totalPrice += addition3Price;
-        if (addition4Name != null) totalPrice += addition4Price;
-
-        return totalPrice;
+        return itemizeHamburger();
     }
 
     public double itemizeHamburger() {
-        double totalPrice = getPrice(); // tüm eklemeler getPrice içinde
-        System.out.println("Toplam fiyat: " + totalPrice + " TL");
+        double totalPrice = this.price;
+
+        if (addition1Name != null) {
+            totalPrice += addition1Price;
+            System.out.println("Addition1: " + addition1Name);
+        }
+        if (addition2Name != null) {
+            totalPrice += addition2Price;
+            System.out.println("Addition2: " + addition2Name);
+        }
+        if (addition3Name != null) {
+            totalPrice += addition3Price;
+            System.out.println("Addition3: " + addition3Name);
+        }
+        if (addition4Name != null) {
+            totalPrice += addition4Price;
+            System.out.println("Addition4: " + addition4Name);
+        }
+
+        System.out.println(totalPrice);
         return totalPrice;
     }
 }

@@ -49,8 +49,6 @@
 
                 @Override
                 public double itemizeHamburger() {
-                    System.out.println("Chips: " + cips);
-                    System.out.println("Drink: " + drink);
                     return super.itemizeHamburger();
                 }
                 }
